@@ -110,7 +110,9 @@ export class PopupComponent
 
   ngAfterViewInit() {
     this.popupInstance = this.createPopup();
-    this.addPopup(this.popupInstance);
+    if (this.popupInstance) {
+      this.addPopup(this.popupInstance);
+    }
   }
 
   ngOnDestroy() {
